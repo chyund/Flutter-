@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shang_cheng/datas/theme.dart';
+
 import 'home_page.dart';
 import 'cart_page.dart';
 import 'category_page.dart';
 import 'member_page.dart';
+import 'drawer.dart';
 
 class IndexPage extends StatefulWidget {
   @override
@@ -46,6 +50,7 @@ class _IndexPageState extends State<IndexPage> {
       appBar: AppBar(
         title: Text(itemTitles[currentIndex]),
       ),
+      drawer: MyDrawer(context.watch<MyTheme>()),
       bottomNavigationBar: BottomNavigationBar(
         items: items,
         currentIndex: currentIndex,
