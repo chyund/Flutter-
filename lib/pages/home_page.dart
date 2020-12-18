@@ -41,6 +41,11 @@ class HomePage extends StatelessWidget {
               duration: 500,
             ),
           ),
+          GridView.count(
+            crossAxisCount: 2,
+            scrollDirection: Axis.horizontal,
+            children: categorys.map(getItem).toList(),
+          )
         ],
       ),
     );
